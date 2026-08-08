@@ -53,12 +53,23 @@ Unity가 embedded package로 인식합니다. 인터넷/깃 없이 전달할 때
 > `.unitypackage` 내보내기는 권장하지 않습니다. 의존 패키지가 함께 딸려오지 않아
 > 받는 쪽에서 컴파일 에러부터 보게 됩니다.
 
+## API 키 발급
+
+https://genpresso.ai/ko/developers 에서 발급합니다 (문서: https://genpresso.ai/ko/api).
+
+- 키는 `gp_`로 시작하며 **발급 직후 한 번만 표시**되므로 그때 복사해 두세요.
+- 텍스트·미디어 모두 이 키 하나로 호출합니다. 별도 OpenRouter/fal.ai 키는 필요 없습니다.
+- **크레딧이 있어야 동작합니다.** 잔액이 부족하면 402가 돌아옵니다.
+  대략 모델 1개 생성에 3크레딧, 프롬프트 생성은 0.001크레딧 미만입니다.
+  실패한 요청은 과금되지 않습니다.
+
 ## 사용 방법
 
 1. 메뉴 **MeshPresso > Voice To 3D > Setup Scene** 클릭
    - `Assets/MeshPresso/VoiceTo3DSettings.asset` 생성(폴더가 없으면 만들어 줍니다) + 씬에 `VoiceTo3DController` 추가
 2. **VoiceTo3DSettings** 에셋의 **Genpresso Api Key**에 `gp_...` 키 입력
    - 비워두면 환경변수 `GENPRESSO_API_KEY`를 대신 사용합니다.
+   - 프로젝트를 공유한다면 에셋에 넣지 말고 환경변수를 쓰세요.
 3. (선택) `VoiceTo3DController`의 **Spawn Anchor**에 빈 GameObject를 지정 — 아래 참고.
 4. **Play** 진입 → **스페이스를 누른 채** 만들고 싶은 물체를 말하고 → 손을 떼면 파이프라인이 실행됩니다.
    - 화면 좌상단 HUD에 상태(녹음 → 프롬프트 생성 → 생성 큐 → 다운로드 → 배치)가 표시됩니다.
