@@ -1,0 +1,18 @@
+{
+    "name": "MeshPresso.VoiceTo3D.Editor",
+    "rootNamespace": "MeshPresso.EditorTools",
+    "references": [
+        "MeshPresso.VoiceTo3D"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

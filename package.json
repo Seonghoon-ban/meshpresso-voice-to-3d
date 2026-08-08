@@ -1,0 +1,31 @@
+{
+  "name": "com.meshpresso.voice-to-3d",
+  "version": "0.1.0",
+  "displayName": "MeshPresso Voice To 3D",
+  "description": "Hold a key, describe an object out loud, and get a generated 3D model placed in your scene. The recording goes to a multimodal model that writes a text-to-3D prompt, the prompt goes to Hyper3D Rodin, and the result is downloaded, imported and positioned automatically. Both calls run through a single Genpresso API key.",
+  "unity": "6000.0",
+  "license": "MIT",
+  "author": {
+    "name": "Seonghoon Ban"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Seonghoon-ban/meshpresso-voice-to-3d.git"
+  },
+  "keywords": [
+    "ai",
+    "generative",
+    "3d",
+    "voice",
+    "genpresso",
+    "rodin"
+  ],
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.unity.cloud.gltfast": "6.19.0",
+    "com.unity.inputsystem": "1.14.2",
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.modules.imageconversion": "1.0.0",
+    "com.unity.modules.unitywebrequest": "1.0.0"
+  }
+}
