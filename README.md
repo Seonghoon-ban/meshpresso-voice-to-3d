@@ -58,7 +58,7 @@ Unity가 embedded package로 인식합니다. 인터넷/깃 없이 전달할 때
 https://genpresso.ai/ko/developers 에서 발급합니다 (문서: https://genpresso.ai/ko/api).
 
 - 키는 `gp_`로 시작하며 **발급 직후 한 번만 표시**되므로 그때 복사해 두세요.
-- 텍스트·미디어 모두 이 키 하나로 호출합니다. 별도 OpenRouter/fal.ai 키는 필요 없습니다.
+- 텍스트·미디어 모두 이 키 하나로 호출합니다.
 - **크레딧이 있어야 동작합니다.** 잔액이 부족하면 402가 돌아옵니다.
   대략 모델 1개 생성에 3크레딧, 프롬프트 생성은 0.001크레딧 미만입니다.
   실패한 요청은 과금되지 않습니다.
@@ -95,7 +95,6 @@ https://genpresso.ai/ko/developers 에서 발급합니다 (문서: https://genpr
 - **인증**: 모든 요청에 `Authorization: Bearer gp_...`. 텍스트/미디어 구분 없이 동일합니다.
 - **텍스트**: `POST /api/v1/chat/completions` — OpenAI 규약 그대로. **오디오 입력(`input_audio`) 정상 동작 확인**
   (응답 `usage.prompt_tokens_details.audio_tokens`로 실제 오디오 처리 확인).
-- **미디어 모델 경로**: `fal-ai/` → **`gp/`** 로 바꿔야 합니다. 원래 이름은 404 (`model_not_found`).
 - **폴링 URL에는 모델 경로가 없습니다**: `media/requests/{id}/status`, `media/requests/{id}`.
   제출 응답의 `status_url` / `response_url` / `cancel_url`은 절대 URL로 오므로 그대로 사용하고,
   없을 때만 `request_id`로 조립합니다.
