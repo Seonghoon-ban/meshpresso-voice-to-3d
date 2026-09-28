@@ -3,6 +3,10 @@
 스페이스를 누르고 있는 동안 말한 내용으로 3D 모델을 생성해 씬에 배치하는 파이프라인입니다.
 **API 키는 Genpresso 하나만 사용합니다** (텍스트·미디어 양쪽 모두 Genpresso 경유).
 
+> **Gaussian Splat 버전:** 메시 대신 **3D Gaussian Splat**(TripoSplat)으로 생성하고, 지금 보고 있는 장면에 어울리게
+> 위치·크기까지 맞춰 배치하는 확장판은 [SplatPresso — Voice To 3DGS](https://github.com/Seonghoon-ban/splatpresso-voice-to-3dgs)를 보세요.
+> 같은 Genpresso 키 하나로 동작하며, aras-p의 UnityGaussianSplatting 렌더러까지 자동으로 설치됩니다.
+
 ```
 [Space 홀드 → 마이크 녹음(WAV)]
         ↓
